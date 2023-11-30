@@ -1,10 +1,15 @@
 package br.com.fatecararas.fatechelper.model.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,4 +30,12 @@ public class Curso {
 
     @Column(length = 500)
     private String descricao;
+    
+    @ManyToMany
+    @JoinTable(
+        name = "curso_disciplinas",
+        joinColumns = @JoinColumn(name = "curso_id"),
+        inverseJoinColumns = @JoinColumn(name = "id_disciplina"))
+    
+    private List<Disciplina> disciplinas;
 }
