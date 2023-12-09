@@ -56,7 +56,7 @@ Neste projeto iremos criar uma aplicação Web e uma API para o controle de uso 
 
 ```
 
-## Grupos
+## Grupo
 
 Num | Integrantes                        | Tema |
 -- |------------------------------------| -- |
