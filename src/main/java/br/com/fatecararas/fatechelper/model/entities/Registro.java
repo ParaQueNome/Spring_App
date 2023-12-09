@@ -19,7 +19,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name="registro")
-
 public class Registro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
