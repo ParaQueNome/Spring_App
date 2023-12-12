@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar </title>
+</head>
+<body>
+    <div class="container" layout:fragment="corpo">
+        <form th:action="@{/helper/curso/salvar}" th:object="${curso}" method="post">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Curso</label>
+                <input type="text" class="form-control" id="nome" th:field="*{nome}">
+                <div id="curso-help" class="form-text">Curso vigente.</div>
+            </div>
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição do Curso</label>
+                <input type="text" class="form-control" id="descricao" th:field="*{descricao}" >
+                <div id="descricao-curso-help" class="form-text">Descrição detalhada do curso.</div>
+            </div>
+            <input type="hidden" id="id" th:field="*{id}">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>
